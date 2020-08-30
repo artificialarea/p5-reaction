@@ -8,17 +8,17 @@ Combining p5js library and React can be tricky... possibility of collisions betw
 
 ## Phased approach
 
-1. [ ] Integrate p5.js into React app
-* [ ] p5 library for canvas animations
-* [ ] p5.sound library for Wed Audio API
+- [ ] **1.** Integrate p5.js into React app
+  - [x] **1a.** p5 library for canvas animations
+  - [ ] **1b.** p5.sound library for Wed Audio API
 
-2. [ ] Add statefulness in React app instead of in vanilla js 
+- [x] **2.** Integrate React statefulness into p5.Element 
 
-3. [ ] Integrate with Node/Express + PostgreSQL database for a (single user) Dashboard.
+- [ ] **3.** Integrate with Node/Express + PostgreSQL database for a (single user) Dashboard.
 
 _If time allows..._
 
-4. [ ] Integrate Auth for registration and login for users.
+- [ ] **4.** Integrate Auth for registration and login for users.
 
 
 <br />
