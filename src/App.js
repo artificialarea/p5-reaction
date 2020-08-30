@@ -5,11 +5,14 @@ import p5 from 'p5'; // via NPM
 
 // Question: why does p5 canvas still appear without explictly adding component?!?!
 
+// TEST CANVAS
 // SketchTestOne: defined 'inline' within App component
 import SketchTestTwo from './p5-tests/sketch-test02';  
 import SketchTestThree from './p5-tests/sketch-test03';
 
-import SoundTestOne from './p5-tests/sound-test01';
+// TEST SOUND
+// import SoundTestOne from './p5-tests/sound-test01';
+import ToneTestOne from './tonejs-tests/tone-test01'
 
 
 export default class App extends React.Component {
@@ -61,8 +64,11 @@ export default class App extends React.Component {
                 {/* <p>sketch test 01: inline</p>
                 <div ref={this.myRef} /> */}
 
-                <p>sound test 01</p>
-                <SoundTestOne />
+                {/* <p>p5.sound test 01</p>
+                <SoundTestOne /> */}
+
+                <p>tone test 01</p>
+                <ToneTestOne />
 
                 <p>sketch test 02: component (with inner state)</p>
                 <SketchTestTwo />
