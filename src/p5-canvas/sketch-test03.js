@@ -1,25 +1,19 @@
 import React from 'react';
 import p5 from 'p5';
 
-export default class SketchTestTwo extends React.Component {
+export default class SketchTestThree extends React.Component {
 
     constructor(props) {
         super(props)
         this.renderRef = new React.createRef()
         this.inputRef = new React.createRef()
-        this.state = {
-            x: 20,
-            y: 100,
-            w: 200,
-            rgb: [255],
-        }
     }
 
     s = ( sketch ) => {
         
         sketch.setup = () => {
             sketch.createCanvas(200, 200);
-            
+
             // Disable p5 draw() from continually rendering.
             // React will specify when p5 should loop in render()
             sketch.noLoop();
@@ -27,8 +21,8 @@ export default class SketchTestTwo extends React.Component {
         
         sketch.draw = () => {
             sketch.background(0);
-            sketch.fill(this.state.rgb);
-            sketch.rect(this.state.x, this.state.y, 50, 50);
+            sketch.fill(this.props.rgb);
+            sketch.rect(this.props.x, this.props.y, 50, 50);
         };
     };
 
@@ -42,17 +36,6 @@ export default class SketchTestTwo extends React.Component {
     
     componentDidMount() {
         this.myP5 = new p5(this.s, this.renderRef.current);
-
-        setTimeout(() => {
-            setInterval(() => {
-                this.setState({
-                    // x: this.state.x + 1
-                    x: this.state.x > this.state.w 
-                        ? -50
-                        : this.state.x + 1
-                })
-            }, 15)
-        }, 1000)
     }
 
     render() {
@@ -67,8 +50,7 @@ export default class SketchTestTwo extends React.Component {
             <div ref={this.renderRef} />
             <input 
                 ref={this.inputRef}
-                value={this.state.x}
-                onChange={this.inputChanged}
+                value={this.props.x}
             />
             </div>
         );

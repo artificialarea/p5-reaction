@@ -13,6 +13,8 @@ Combining p5js library and React can be tricky... possibility of collisions betw
   - [ ] **1b.** p5.sound library for Wed Audio API
 
 - [x] **2.** Integrate React statefulness into p5.Element 
+    - [x] v1. internal state within p5 component
+    - [x] v2. state passed to p5 component as props
 
 - [ ] **3.** Integrate with Node/Express + PostgreSQL database for a (single user) Dashboard.
 
